@@ -5,11 +5,11 @@ avatar: /img/avatar.jpg
 since: 2017
 
 # 顶部菜单
-# #title形式为页内跳转，单页模式
-# 也可以选择外链或其他页面
+# #title 为页内跳转，单页模式
+# 可以选择外链或其他页面
 menu:
-  News: /#News
-  Publications: /publications
+  Publications: /#Publications
+  Projects: /
   Awards: /
   Blog: /
 
@@ -18,6 +18,7 @@ loading_bg:
 
 # 社交链接，不需要的链接直接注释掉
 # 可以调整显示顺序
+# 图标调用 font-awesome 4.7
 social:
   enable: true
 social_links:
@@ -28,16 +29,26 @@ social_links:
   fa fa-rss: /atom.xml
 
 # 额外的social_links，可自行配置
+# name: Url
 e_social:
   enable: true
 e_social_links:
   Google Scholar: /
   ORCID: /
 
-# 可以配置CDN
-# 可根据需要自行添加js/css
+# CV download link
+cv_dl:
+  enable: true
+  dir: /attaches/CV.pdf
+  description: My Detail CV.
+
+# 配置CDN
+# 根据需要自行添加js/css
+# 自定义css可以直接写在user.styl中
 CDN_USE:
   css:
     - /css/index.css
-    - /css/font-awesome.min.css
-#    - https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css
+    - https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css
+  js:
+    - https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js #/js/third-party/jquery.min.js
+    - /js/main.js

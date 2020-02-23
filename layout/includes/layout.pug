@@ -15,5 +15,8 @@ html(lang=config.language)
         main#page_main
             include ./side-card.pug
             block content
+        include ./mobile-nav.pug
         footer#page_footer
             include ./footer.pug
+        each item in theme.CDN_USE.js
+            script(src=url_for(item))

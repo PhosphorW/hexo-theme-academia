@@ -1,3 +1,5 @@
+@import 'user'
+
 html,
 body
   height 100%
@@ -9,7 +11,7 @@ body
   color: #494e52;
   line-height: 1.5;
 
-//顶部菜单部分
+// top menu
 //------------------------------------------------
 #page_header
   position: relative;
@@ -40,34 +42,60 @@ body
     color: #7a8288;
     font-weight: 600;
     text-decoration: none;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    &:hover
+      color: black;
 
 .menus_items
-  display inline-block
-  list-style-type none
-  margin 0
-  clear both
+  display none
 
-  li
-    display table-cell
-    vertical-align middle
+@media (min-width: 37.5em)
+  .menus_items
+    display inline-block
+    list-style-type none
+    margin 0
+    clear both
+    li
+      display table-cell
+      vertical-align middle
+      a
+        position: relative;
+        display: block;
+        margin: 0 1rem;
+        padding: 0.5rem 0;
+        color: #7a8288;
+        text-decoration: none;
+        &::before
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          height: 4px;
+          background: #bdc1c4;
+          width: 100%;
+          -webkit-transition: all 0.2s ease-in-out;
+          transition: all 0.2s ease-in-out;
+          -webkit-transform: scaleX(0);
+          -ms-transform: scaleX(0);
+          transform: scaleX(0);
+        &:hover
+          color: #5c6266;
+          &::before
+            -webkit-transform: scaleX(1);
+            -ms-transform: scaleX(1);
+            transform: scaleX(1);
 
-    a
-      display: block;
-      margin: 0 1rem;
-      padding: 0.5rem 0;
-      color: #7a8288;
-      text-decoration: none;
 
-
-//正文部分
+// page main
 //------------------------------------------------
 #page_main
-  min-height: 85%;
-  max-width: 600px;
+  min-height: 72%;
   margin-left: auto;
   margin-right: auto;
   clear: both;
   margin-top: 2em;
+  margin-bottom: 4em;
   padding-left: 1em;
   padding-right: 1em;
   animation: intro 0.3s both;
@@ -77,22 +105,34 @@ body
     content: "";
     display: table;
 
+.page article
+  padding-left: .8em;
+
 @media screen and (min-width: 75em)
   #page_main
     max-width: 1200px;
 
 @media (min-width: 37.5em)
   .page
-    width: 83.05085%;
+    width: 82.5%;
     float: right;
     margin-right: 0;
+    -webkit-box-shadow: 0 4px 8px 6px rgba(7,17,27,0.06);
+    box-shadow: 0 4px 8px 6px rgba(7,17,27,0.06);
+    article
+      padding-left: 2em;
+      padding-bottom: 2em;
 
 
-//侧边栏部分
+// sidebar
 //------------------------------------------------
 .side-card
   clear: both;
   margin-bottom: 1em;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  .card-wrap
+    padding-left: 10px;
   img
     width: 100%;
   p,
@@ -114,12 +154,17 @@ body
   display: table-cell;
   vertical-align: top;
   padding-left: 15px;
-  padding-right: 25px;
+  padding-right: 15px;
   line-height: 1;
+  h3
+    margin: 0px;
+  .author-bio
+    font-size: .75em;
+    margin: .3rem 0;
 
 .author-links
-  position: relative;
   display: table-cell;
+  position: relative;
   vertical-align: middle;
   z-index: 10;
   cursor: pointer;
@@ -134,13 +179,46 @@ body
     color: inherit;
     font-size: 1em;
     text-decoration: none;
+  button
+    margin-bottom: 0px;
+
+.btn
+  display: inline-block;
+  margin-bottom: 0.25em;
+  font-size: 0.75em;
+  font-weight: bold;
+  text-align: center;
+  background-color: rgb(122, 130, 136);
+  cursor: pointer;
+  color: rgb(255, 255, 255) !important;
+  padding: 0.6em 1em;
+  text-decoration: none;
+  border-radius: 4px;
+  border-width: 0px !important;
+  border-style: initial !important;
+  border-color: initial !important;
+  border-image: initial !important;
+  &:hover
+    background-color: rgb(51, 51, 51);
+
+.m-social-links
+  background-color: rgb(255, 255, 255);
+  color: rgb(122, 130, 136) !important;
+  border-width: 1px !important;
+  border-style: solid !important;
+  border-color: rgb(189, 193, 196) !important;
+  border-image: initial !important;
+  &:hover
+    color: rgb(255, 255, 255) !important;
 
 .social-icons
-  display: block;
+  display: none;
   position: absolute;
   right: 0;
+  width: 90px;
   margin-top: 15px;
-  padding: 10px;
+  padding-top: 8px;
+  padding-left: 10px;
   list-style-type: none;
   border: 1px solid #f2f3f3;
   border-radius: 4px;
@@ -151,7 +229,7 @@ body
   a
     font-size 1.3em
   li
-    display: inline;
+    display: inline-block;
   .fa
     display: inline-block;
     font: normal normal normal 14px/1 FontAwesome;
@@ -163,13 +241,50 @@ body
     width: 1.28571em;
     text-align: center;
 
+.is-open .social-icons::before
+  display: block;
+  content: "";
+  position: absolute;
+  top: -11px;
+  left: calc(50% - 10px);
+  width: 0px;
+  z-index: 0;
+  border-style: solid;
+  border-width: 0px 10px 10px;
+  border-color: rgb(242, 243, 243) transparent;
+
+.is-open .social-icons::after
+  display: block;
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: calc(50% - 10px);
+  width: 0px;
+  z-index: 1;
+  border-style: solid;
+  border-width: 0px 10px 10px;
+  border-color: rgb(255, 255, 255) transparent;
+
 .social-links
+  display none
   list-style-type none
   cursor default
   .fa
     color black
     &::before
       margin-right .4rem
+
+.cv-links
+  color: #2070AB !important
+  display: block;
+  position: relative;
+  font-size: 0.8em;
+  margin-left: 3.2rem;
+  i
+    font-weight: 600;
+    text-decoration: underline;
+    &::before
+      margin-right: .4rem
 
 @media (min-width: 75em)
   .side-card
@@ -178,11 +293,16 @@ body
 @media (min-width: 37.5em)
   .side-card
     width: 15.25424%;
+    min-width: 165px;
     float: left;
     margin-right: 1.69492%;
     opacity: 0.75;
     -webkit-transition: opacity 0.2s ease-in-out;
     transition: opacity 0.2s ease-in-out;
+    -webkit-box-shadow: 0 4px 8px 6px rgba(7,17,27,0.06);
+    box-shadow: 0 4px 8px 6px rgba(7,17,27,0.06);
+    .card-wrap
+      padding: 10px 10px 10px 17px;
 
   .sticky
     clear: both;
@@ -196,6 +316,7 @@ body
     display: block;
     width: auto;
     height: auto;
+    text-align: center;
     img
       padding: 5px;
       border: 1px solid #f2f3f3;
@@ -207,8 +328,9 @@ body
     padding-right: 0;
     color: black;
     .author-bio
-      margin-top: 10px;
-      margin-bottom: 20px;
+      font-size: .85em
+      margin-top: 8px;
+      margin-bottom: 10px;
 
   .author-links
     display: block;
@@ -216,17 +338,25 @@ body
   .social-icons
     display: block;
     position: relative;
+    width: auto;
     margin: 0;
     padding: 0;
     border: 0;
     background: transparent;
     box-shadow: none;
 
+  .m-social-links
+    display none
+
   .social-links
+    display block
     margin-top .5rem
     padding 0
 
-//footer部分
+  .cv-links
+    margin: 0;
+
+// footer
 //------------------------------------------------
 #page_footer
   clear: both;
@@ -235,7 +365,6 @@ body
   float: left;
   margin-left: 0;
   margin-right: 0;
-  clear: both;
   //margin-top: -100px;
   color: #9ba1a6;
   -webkit-animation: intro 0.3s both;
@@ -246,6 +375,8 @@ body
   border-top: 1px solid #bdc1c4;
   a
     color: #9ba1a6;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
     &:hover
       color: black;
 
@@ -262,3 +393,164 @@ body
   .footer_wrap {
     max-width: 1200px;
   }
+
+
+// mobile-nav
+//------------------------------------------------
+.nav-wrap
+  position fixed
+  bottom 220px
+  right 0
+  max-width 50px
+  visibility hidden
+  opacity 0
+  transition: all .3s;
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  &.is-visible
+    visibility visible
+    opacity 1
+    pointer-events auto
+
+.nav
+  height 30px
+  width 30px
+
+.site-nav
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  background-color: rgb(122, 130, 136);
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  padding: 0px 0.3rem;
+  border-width: 0px;
+  border-style: initial;
+  border-color: initial;
+  border-image: initial;
+  outline: none;
+
+.navicon
+  position: relative;
+  width: 18px;
+  height: 3px;
+  background: rgb(255, 255, 255);
+  margin: auto;
+  transition: all 0.3s ease 0s;
+  &::before
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: 0px;
+    width: 18px;
+    height: 3px;
+    background: rgb(255, 255, 255);
+    transition: all 0.3s ease 0s;
+  &::after
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 0px;
+    width: 18px;
+    height: 3px;
+    background: rgb(255, 255, 255);
+    transition: all 0.3s ease 0s;
+
+.nav-open .navicon
+  background: transparent;
+  &::before
+    transform-origin: 50% 50%;
+    top: 0px;
+    left: -3px;
+    width: 25px;
+    transform: rotate3d(0, 0, 1, 45deg);
+  &::after
+    transform-origin: 50% 50%;
+    top: 0px;
+    left: -3px;
+    width: 25px;
+    transform: rotate3d(0, 0, 1, -45deg);
+
+.nav_items
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  right: 45px;
+  top: -20px;
+  margin: 0;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 10px;
+  padding: 5px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(242, 243, 243);
+  border-image: initial;
+  border-radius: 4px;
+  background: rgb(255, 255, 255);
+  list-style: none;
+  transition: all ease-in-out 0.2s;
+  li
+    display: block;
+    border-bottom: 1px solid rgb(242, 243, 243);
+    a
+      display: block;
+      color: rgb(122, 130, 136);
+      font-size: 1em;
+      margin: 0px;
+      padding: 10px 20px;
+      text-decoration: none;
+      transition: all 0.2s ease-in-out 0s;
+      &:hover
+        color: rgb(92, 98, 102);
+        background: rgb(222, 224, 225);
+  &::before
+    content: "";
+    position: absolute;
+    top: 20px;
+    right: -10px;
+    width: 0px;
+    display: block;
+    z-index: 0;
+    border-style: solid;
+    border-width: 10px 0px 10px 10px;
+    border-color: transparent transparent transparent white;
+  &::after
+    clear: both;
+    content: "";
+    display: table;
+
+.nav-open .nav_items
+  visibility visible
+  opacity 1
+
+.cd-top
+  display block
+  width auto
+  height auto
+  i
+    display: block;
+    margin-top: 3px;
+    width: 30px;
+    height: 30px;
+    background-color: #7a8288;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 29px;
+    cursor: pointer;
+
+
+// scrollbar
+//------------------------------------------------
+::-webkit-scrollbar
+  width: 12px;
+  height: 8px;
+  background-color: white;
+
+::-webkit-scrollbar-track
+  //border-radius: 10px;
+  background-color: white;
+
+::-webkit-scrollbar-thumb
+  //border-radius: 10px;
+  background-color: rgba(122, 130, 136, 0.4);

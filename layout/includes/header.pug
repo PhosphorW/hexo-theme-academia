@@ -5,9 +5,7 @@
         each value, label in theme.menu
             if !Array.isArray(value)
                 li.menus_item
-                    a.site-page(href=url_for(trim(value.split('||')[0])))
-                        span=' ' + label
+                    a.site-page(href=url_for(trim(value.split('||')[0])))=' ' + label
             else
                 li.menus_item
-                    a.site-page
-                        span=' ' + trim(label.split('||')[0])
+                    a.site-page=' ' + trim(label.split('||')[0])

@@ -1,0 +1,14 @@
+.nav-wrap
+    .nav
+        button.site-nav
+            .navicon
+        ul.nav_items
+            each value, label in theme.menu
+                if !Array.isArray(value)
+                    li.nav_item
+                        a.nav-page(href=url_for(trim(value.split('||')[0])))=' ' + label
+                else
+                    li.nav_item
+                        a.nav-page=' ' + trim(label.split('||')[0])
+    .cd-top
+        i(class="fa fa-arrow-up" aria-hidden="true")
