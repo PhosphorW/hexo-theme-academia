@@ -1,0 +1,19 @@
+doctype html
+html(lang=config.language)
+    head
+        meta(charset='UTF-8')
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5")
+        title=config.title
+        meta(name="author" content=config.author)
+        !=favicon_tag(config.favicon || theme.favicon || '/favicon.ico')
+        each item in theme.CDN_USE.css
+            link(rel='stylesheet', href=url_for(item))
+    body
+        header#page_header
+            include ./header.pug
+        main#page_main
+            include ./side-card.pug
+            block content
+        footer#page_footer
+            include ./footer.pug

@@ -1,0 +1,43 @@
+favicon: /img/favicon.png
+
+avatar: /img/avatar.jpg
+
+since: 2017
+
+# 顶部菜单
+# #title形式为页内跳转，单页模式
+# 也可以选择外链或其他页面
+menu:
+  News: /#News
+  Publications: /publications
+  Awards: /
+  Blog: /
+
+loading_bg:
+  flink: /img/profile.png
+
+# 社交链接，不需要的链接直接注释掉
+# 可以调整显示顺序
+social:
+  enable: true
+social_links:
+  fa fa-twitter: /
+  fa fa-github: /
+  fa fa-linkedin-square: /
+  fa fa-envelope: chenbl1995@seu.edu.cn #E-mail
+  fa fa-rss: /atom.xml
+
+# 额外的social_links，可自行配置
+e_social:
+  enable: true
+e_social_links:
+  Google Scholar: /
+  ORCID: /
+
+# 可以配置CDN
+# 可根据需要自行添加js/css
+CDN_USE:
+  css:
+    - /css/index.css
+    - /css/font-awesome.min.css
+#    - https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css

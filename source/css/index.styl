@@ -1,0 +1,264 @@
+html,
+body
+  height 100%
+  margin 0
+
+body
+  margin: 0;
+  padding: 0;
+  color: #494e52;
+  line-height: 1.5;
+
+//顶部菜单部分
+//------------------------------------------------
+#page_header
+  position: relative;
+  border-bottom: 1px solid #f2f3f3;
+  -webkit-animation: intro 0.3s both;
+  animation: intro 0.3s both;
+  -webkit-animation-delay: 0.15s;
+  animation-delay: 0.15s;
+  z-index: 20;
+
+.header_wrap
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  clear: both;
+  padding: .8em 1em .8em;
+  font-size: 1.25rem;
+
+#blog_name
+  display inline-block
+  width auto
+  vertical-align top
+
+  a
+    display: block;
+    margin: 0 1rem;
+    padding: 0.5rem 0;
+    color: #7a8288;
+    font-weight: 600;
+    text-decoration: none;
+
+.menus_items
+  display inline-block
+  list-style-type none
+  margin 0
+  clear both
+
+  li
+    display table-cell
+    vertical-align middle
+
+    a
+      display: block;
+      margin: 0 1rem;
+      padding: 0.5rem 0;
+      color: #7a8288;
+      text-decoration: none;
+
+
+//正文部分
+//------------------------------------------------
+#page_main
+  min-height: 85%;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  clear: both;
+  margin-top: 2em;
+  padding-left: 1em;
+  padding-right: 1em;
+  animation: intro 0.3s both;
+  animation-delay: 0.35s;
+  &::after
+    clear: both;
+    content: "";
+    display: table;
+
+@media screen and (min-width: 75em)
+  #page_main
+    max-width: 1200px;
+
+@media (min-width: 37.5em)
+  .page
+    width: 83.05085%;
+    float: right;
+    margin-right: 0;
+
+
+//侧边栏部分
+//------------------------------------------------
+.side-card
+  clear: both;
+  margin-bottom: 1em;
+  img
+    width: 100%;
+  p,
+  li
+    font-size: .85em;
+    line-height: 1.5;
+
+.author-avatar
+  display: table-cell;
+  vertical-align: top;
+  width: 36px;
+  height: 36px;
+  img
+    width: 100%;
+    max-width: 110px;
+    border-radius: 50%;
+
+.author-discrip
+  display: table-cell;
+  vertical-align: top;
+  padding-left: 15px;
+  padding-right: 25px;
+  line-height: 1;
+
+.author-links
+  position: relative;
+  display: table-cell;
+  vertical-align: middle;
+  z-index: 10;
+  cursor: pointer;
+  li
+    white-space: nowrap;
+    margin-bottom: 0.5em;
+  a
+    margin-bottom: 5px;
+    padding-right: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    color: inherit;
+    font-size: 1em;
+    text-decoration: none;
+
+.social-icons
+  display: block;
+  position: absolute;
+  right: 0;
+  margin-top: 15px;
+  padding: 10px;
+  list-style-type: none;
+  border: 1px solid #f2f3f3;
+  border-radius: 4px;
+  background: #fff;
+  z-index: -1;
+  box-shadow: 0 0 10px rgba(0,0,0,0.25);
+  cursor: default;
+  a
+    font-size 1.3em
+  li
+    display: inline;
+  .fa
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: black;
+    width: 1.28571em;
+    text-align: center;
+
+.social-links
+  list-style-type none
+  cursor default
+  .fa
+    color black
+    &::before
+      margin-right .4rem
+
+@media (min-width: 75em)
+  .side-card
+    padding-right: 0;
+
+@media (min-width: 37.5em)
+  .side-card
+    width: 15.25424%;
+    float: left;
+    margin-right: 1.69492%;
+    opacity: 0.75;
+    -webkit-transition: opacity 0.2s ease-in-out;
+    transition: opacity 0.2s ease-in-out;
+
+  .sticky
+    clear: both;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 2em;
+    &>*
+      display: block;
+
+  .author-avatar
+    display: block;
+    width: auto;
+    height: auto;
+    img
+      padding: 5px;
+      border: 1px solid #f2f3f3;
+
+  .author-discrip
+    display: block;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    color: black;
+    .author-bio
+      margin-top: 10px;
+      margin-bottom: 20px;
+
+  .author-links
+    display: block;
+
+  .social-icons
+    display: block;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+
+  .social-links
+    margin-top .5rem
+    padding 0
+
+//footer部分
+//------------------------------------------------
+#page_footer
+  clear: both;
+  height: 100px
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  clear: both;
+  //margin-top: -100px;
+  color: #9ba1a6;
+  -webkit-animation: intro 0.3s both;
+  animation: intro 0.3s both;
+  -webkit-animation-delay: 0.45s;
+  animation-delay: 0.45s;
+  background-color: #f2f3f3;
+  border-top: 1px solid #bdc1c4;
+  a
+    color: #9ba1a6;
+    &:hover
+      color: black;
+
+.footer_wrap
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  clear: both;
+  margin-top: 2em;
+  padding: 0 1em 2em;
+  font-size: .8rem;
+
+@media (min-width: 75em)
+  .footer_wrap {
+    max-width: 1200px;
+  }

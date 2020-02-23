@@ -1,0 +1,20 @@
+.side-card.sticky
+    div(itemscope itemtype='http://schema.org/Person')
+        .author-avatar
+            img.avatar-img(src=url_for(theme.avatar) onerror=`this.onerror=null;this.src='` + url_for(theme.loading_bg.flink) + `'` alt="avatar")
+        .author-discrip
+            h3= config.author
+            p.author-bio= config.description
+        .author-links
+            if(theme.social.enable)
+                ul.social-icons
+                    each url, icon in theme.social_links
+                        li
+                            a.social-icon(href=url target="_blank")
+                                i(class=icon aria-hidden="true")
+            if(theme.e_social.enable)
+                ul.social-links
+                    each url, name in theme.e_social_links
+                        li
+                            a.social-icon(href=url target="_blank")
+                                i(class="fa fa-link" aria-hidden="true")= name

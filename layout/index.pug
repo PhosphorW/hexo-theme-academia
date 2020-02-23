@@ -1,0 +1,7 @@
+extends includes/layout
+
+block content
+    .page(itemscope itemtype='http://schema.org/CreativeWork')
+          each article in page.posts.data
+              if article.academia
+                  article!= article.content

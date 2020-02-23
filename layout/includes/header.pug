@@ -1,0 +1,13 @@
+.header_wrap
+    #blog_name
+        a#site-name.blog_title(href=url_for('/')) #[=config.title]
+    ul.menus_items
+        each value, label in theme.menu
+            if !Array.isArray(value)
+                li.menus_item
+                    a.site-page(href=url_for(trim(value.split('||')[0])))
+                        span=' ' + label
+            else
+                li.menus_item
+                    a.site-page
+                        span=' ' + trim(label.split('||')[0])
