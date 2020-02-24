@@ -24,8 +24,13 @@ social:
   enable: true
 social_links:
   fa fa-twitter: /
+  fa fa-facebook-square: /
   fa fa-github: /
+  fa fa-stack-overflow: /
   fa fa-linkedin-square: /
+  fa fa-weibo: /
+  fa fa-wechat: /
+  fa fa-qq: /
   fa fa-envelope: / #E-mail
   fa fa-rss: /  #rss
 

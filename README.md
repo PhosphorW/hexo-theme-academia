@@ -44,11 +44,19 @@ or
 hexo n page "any title"
 ```
 
-**Important:**
-Add `academia: true` in front_matter filed in `post .md` (Note: only post with this front_matter will be shown on index page).
+**Important:** </br>
+Add `academia: true` in front_matter filed in `post .md`.
 
-![post front_matter](https://github.com/PhosphorW/phower-img-folder/blob/master/hexo-theme-academia_front-matter.png)
+![post front_matter](https://raw.githubusercontent.com/PhosphorW/phower-img-folder/master/hexo-theme-academia_front-matter.png)
+
+Only post with `academia: true` front_matter will be shown on home (index) page. You can write your informations in either one post or some posts with this method. The front_matter doesn't works in `page`. The `pages` are standalone with its markdown content.
+
 
 ## Theme Configurtion
+All of below options can be config in theme folder `_config.yml`
 
-菜单的配置
+- Top Menu
+- Side Bar: Support avatar, social links, extra social links (optional), CV_download_link
+- Box-shadow mode (optional)
+
+All icons in page is supported with [font-awesome-4](http://fontawesome.dashgame.com/)
