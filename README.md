@@ -1,7 +1,11 @@
 # hexo-theme-academia
+
 !()[https://img.shields.io/badge/release-1.1.0-blue.svg]
+
 !()[https://img.shields.io/badge/hexo-3.1%2B-blue.svg]
+
 !()[https://img.shields.io/badge/license-MIT-green.svg]
+
 Simple page for academic websites on Hexo, crafted from Jekyll/academicpages.
 
 ## Introduction
