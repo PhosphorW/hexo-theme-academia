@@ -1,8 +1,11 @@
 # hexo-theme-academia
+!()[https://img.shields.io/badge/release-1.1.0-blue.svg]
+!()[https://img.shields.io/badge/hexo-3.1%2B-blue.svg]
+!()[https://img.shields.io/badge/license-MIT-green.svg]
 Simple page for academic websites on Hexo, crafted from Jekyll/academicpages.
 
 ## Introduction
-This is a light & simple & responsive theme for academic websites on Hexo, crafted from [academicpages](https://github.com/academicpages/academicpages.github.io) on Jekyll.
+This is a light & simple & responsive theme for academic websites on Hexo, crafted from [academicpages](https://github.com/academicpages/academicpages.github.io) on Jekyll. Thanks a lot.
 
 The theme adopts only `post` and `page` in Hexo to show your informations. For an academic page, it's important to be simple and obvious.
 
