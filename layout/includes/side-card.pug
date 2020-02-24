@@ -18,7 +18,9 @@
                     each url, name in theme.e_social_links
                         li
                             a.social-icon(href=url target="_blank")
-                                i(class="fa fa-link" aria-hidden="true")= name
+                                i(class="fa fa-link" aria-hidden="true")
+                                    span= name
         if(theme.cv_dl.enable)
             a.cv-links(href=url_for(theme.cv_dl.dir) target="_blank")
-                i(class="fa fa-file-pdf-o" aria-hidden="true")= theme.cv_dl.description
+                i(class="fa fa-file-pdf-o" aria-hidden="true")
+                    span= theme.cv_dl.description

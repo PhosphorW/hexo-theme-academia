@@ -1,5 +1,7 @@
 @import 'user'
 
+$font-family = "Times New Roman", FangSong, STFangsong, sans-serif;
+
 html,
 body
   height 100%
@@ -10,6 +12,12 @@ body
   padding: 0;
   color: #494e52;
   line-height: 1.5;
+  font-family: $font-family
+
+a,
+span,
+.btn
+  font-family: $font-family
 
 // top menu
 //------------------------------------------------
@@ -27,7 +35,7 @@ body
   margin-left: auto;
   margin-right: auto;
   clear: both;
-  padding: .8em 1em .8em;
+  padding: .8em 1em .5em;
   font-size: 1.25rem;
 
 #blog_name
@@ -107,6 +115,19 @@ body
 
 .page article
   padding-left: .8em;
+  h2
+    font-size 1.8em
+  h3
+    font-size 1.4em
+  p
+    font-size 1.2em
+  a
+    color #494e52
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    &:hover
+      color: #c62641;
+
 
 @media screen and (min-width: 75em)
   #page_main
@@ -117,11 +138,11 @@ body
     width: 82.5%;
     float: right;
     margin-right: 0;
-    -webkit-box-shadow: 0 4px 8px 6px rgba(7,17,27,0.06);
-    box-shadow: 0 4px 8px 6px rgba(7,17,27,0.06);
+    if hexo-config('box_shadow') && hexo-config('box_shadow.enable')
+      -webkit-box-shadow: 0 4px 8px 6px rgba(7,17,27,0.06);
+      box-shadow: 0 4px 8px 6px rgba(7,17,27,0.06);
     article
-      padding-left: 2em;
-      padding-bottom: 2em;
+      padding 0 2em 2em;
 
 
 // sidebar
@@ -240,6 +261,10 @@ body
     color: black;
     width: 1.28571em;
     text-align: center;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    &:hover
+      color: #c62641;
 
 .is-open .social-icons::before
   display: block;
@@ -269,10 +294,14 @@ body
   display none
   list-style-type none
   cursor default
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   .fa
     color black
     &::before
       margin-right .4rem
+    span:hover
+      text-decoration: underline;
 
 .cv-links
   color: #2070AB !important
@@ -299,8 +328,9 @@ body
     opacity: 0.75;
     -webkit-transition: opacity 0.2s ease-in-out;
     transition: opacity 0.2s ease-in-out;
-    -webkit-box-shadow: 0 4px 8px 6px rgba(7,17,27,0.06);
-    box-shadow: 0 4px 8px 6px rgba(7,17,27,0.06);
+    if hexo-config('box_shadow') && hexo-config('box_shadow.enable')
+      -webkit-box-shadow: 0 4px 8px 6px rgba(7,17,27,0.06);
+      box-shadow: 0 4px 8px 6px rgba(7,17,27,0.06);
     .card-wrap
       padding: 10px 10px 10px 17px;
 
@@ -386,14 +416,16 @@ body
   margin-right: auto;
   clear: both;
   margin-top: 2em;
-  padding: 0 1em 2em;
+  padding-left: 2.5em;
   font-size: .8rem;
 
 @media (min-width: 75em)
-  .footer_wrap {
+  .footer_wrap
     max-width: 1200px;
-  }
 
+@media (min-width: 37.5em)
+  .footer_wrap
+    padding: 0 1em 2em;
 
 // mobile-nav
 //------------------------------------------------

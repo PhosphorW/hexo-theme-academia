@@ -25,6 +25,12 @@ $(function () {
         }
     })
 
+    $(document).click(function(e){
+        var target = $(e.target);
+        if(target.closest(".nav").length != 0) return;
+        $(".nav").removeClass("nav-open").addClass("nav-close")
+    })
+
     $(document).ready(function ($) {
         var offset = 100,
             scroll_top_duration = 700,

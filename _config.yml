@@ -4,7 +4,7 @@ avatar: /img/avatar.jpg
 
 since: 2017
 
-# 顶部菜单
+# Top Menu 顶部菜单
 # #title 为页内跳转，单页模式
 # 可以选择外链或其他页面
 menu:
@@ -13,10 +13,11 @@ menu:
   Awards: /
   Blog: /
 
+# Don't Change
 loading_bg:
   flink: /img/profile.png
 
-# 社交链接，不需要的链接直接注释掉
+# Social Links; 社交链接，不需要的链接直接注释掉
 # 可以调整显示顺序
 # 图标调用 font-awesome 4.7
 social:
@@ -25,11 +26,11 @@ social_links:
   fa fa-twitter: /
   fa fa-github: /
   fa fa-linkedin-square: /
-  fa fa-envelope: chenbl1995@seu.edu.cn #E-mail
-  fa fa-rss: /atom.xml
+  fa fa-envelope: / #E-mail
+  fa fa-rss: /  #rss
 
-# 额外的social_links，可自行配置
-# name: Url
+# Additional social_links，不需要的链接直接注释掉
+# name: url
 e_social:
   enable: true
 e_social_links:
@@ -42,7 +43,12 @@ cv_dl:
   dir: /attaches/CV.pdf
   description: My Detail CV.
 
-# 配置CDN
+# Box-shadow
+# display box-shadow on page or not
+box_shadow:
+  enable: false
+
+# CDN
 # 根据需要自行添加js/css
 # 自定义css可以直接写在user.styl中
 CDN_USE:
