@@ -47,7 +47,7 @@ hexo n page "any title"
 **Important:** </br>
 Add `academia: true` in front_matter filed in `post .md`.
 
-![post front_matter](https://raw.githubusercontent.com/PhosphorW/phower-img-folder/master/hexo-theme-academia_front-matter.png)
+<img src="https://raw.githubusercontent.com/PhosphorW/phower-img-folder/master/hexo-theme-academia_front-matter.png" width="660px" alt="front_matter">
 
 Only post with `academia: true` front_matter will be shown on home (index) page. You can write your informations in either one post or some posts with this method. The front_matter doesn't works in `page`. The `pages` are standalone with its markdown content.
 

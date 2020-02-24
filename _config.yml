@@ -1,6 +1,7 @@
 favicon: /img/favicon.png
 avatar: /img/avatar.jpg
-author: ''
+# if author sets in hexo_config, this str doesn't work
+author: 'Jason'
 author_bio: 'Your biography can be writed down here.'
 
 since: 2020
