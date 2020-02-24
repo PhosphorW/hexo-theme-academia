@@ -3,8 +3,8 @@
         .author-avatar
             img.avatar-img(src=url_for(theme.avatar) onerror=`this.onerror=null;this.src='` + url_for(theme.loading_bg.flink) + `'` alt="avatar")
         .author-discrip
-            h3= config.author
-            p.author-bio= config.description
+            h3= theme.author || config.author
+            p.author-bio= theme.author_bio
         .author-links
             button.btn.m-social-links Links
             if(theme.social.enable)

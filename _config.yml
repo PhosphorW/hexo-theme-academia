@@ -1,16 +1,16 @@
 favicon: /img/favicon.png
-
 avatar: /img/avatar.jpg
+author: ''
+author_bio: 'Your biography can be writed down here.'
 
-since: 2017
+since: 2020
 
 # Top Menu 顶部菜单
 # #title 为页内跳转，单页模式
 # 可以选择外链或其他页面
 menu:
   Publications: /#Publications
-  Projects: /
-  Awards: /
+  About: /
   Blog: /
 
 # Don't Change
