@@ -11,7 +11,7 @@ The theme adopts only `post` and `page` in Hexo to show your informations. For a
 
 Example page: [phosphorw.github.io](https://phosphorw.github.io/)
 
-!(mockup)[https://raw.githubusercontent.com/PhosphorW/phower-img-folder/master/hexo-theme-academia_mockup.jpg]
+![mockup](https://raw.githubusercontent.com/PhosphorW/phower-img-folder/master/hexo-theme-academia_mockup.jpg)
 
 ## Preparation
 
@@ -68,5 +68,5 @@ All of below options can be config in theme folder `_config.yml`
 
 All icons in page is supported with [font-awesome-4](http://fontawesome.dashgame.com/)
 
-!(theme-layout)(https://raw.githubusercontent.com/PhosphorW/phower-img-folder/master/hexo-theme-academia_layout.png)
+![theme-layout](https://raw.githubusercontent.com/PhosphorW/phower-img-folder/master/hexo-theme-academia_layout.png)
 
