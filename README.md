@@ -9,6 +9,10 @@ This is a light & simple & responsive theme for academic websites on Hexo, craft
 
 The theme adopts only `post` and `page` in Hexo to show your informations. For an academic page, it's important to be simple and obvious.
 
+Example page: [phosphorw.github.io](https://phosphorw.github.io/)
+
+!(mockup)[https://raw.githubusercontent.com/PhosphorW/phower-img-folder/master/hexo-theme-academia_mockup.jpg]
+
 ## Preparation
 
 Some skills you need:
@@ -63,3 +67,6 @@ All of below options can be config in theme folder `_config.yml`
 - Box-shadow mode (optional)
 
 All icons in page is supported with [font-awesome-4](http://fontawesome.dashgame.com/)
+
+!(theme-layout)(https://raw.githubusercontent.com/PhosphorW/phower-img-folder/master/hexo-theme-academia_layout.png)
+
