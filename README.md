@@ -68,5 +68,7 @@ All of below options can be config in theme folder `_config.yml`
 
 All icons in page is supported with [font-awesome-4](http://fontawesome.dashgame.com/)
 
+If you want to use rss feed, refer to hexo plugin: [hexo-generator-feed](https://github.com/hexojs/hexo-generator-feed)
+
 ![theme-layout](https://raw.githubusercontent.com/PhosphorW/phower-img-folder/master/hexo-theme-academia_layout.png)
 
