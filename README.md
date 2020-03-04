@@ -72,3 +72,5 @@ If you want to use rss feed, refer to hexo plugin: [hexo-generator-feed](https:/
 
 ![theme-layout](https://raw.githubusercontent.com/PhosphorW/phower-img-folder/master/hexo-theme-academia_layout.png)
 
+## Document
+中文文档：[Hexo-Theme-Academia 说明文档](https://phower.me/2020/03/Hexo-theme-academia-%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/)
