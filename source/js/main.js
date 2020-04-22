@@ -48,4 +48,9 @@ $(function () {
         });
     });
 
+    $(document).pjax('a[target!=_blank]','.page', {
+        fragment: '.page',
+        timeout: 5000
+    });
+
 })

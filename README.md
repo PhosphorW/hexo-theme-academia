@@ -1,6 +1,6 @@
 # hexo-theme-academia
 
-<img src="https://img.shields.io/badge/release-1.1.0-blue.svg"> <img src="https://img.shields.io/badge/hexo-3.1%2B-blue.svg"> <img src="https://img.shields.io/badge/license-MIT-green.svg">
+<img src="https://img.shields.io/github/v/release/PhosphorW/hexo-theme-academia"> <img src="https://img.shields.io/badge/hexo-3.1%2B-blue.svg"> <img src="https://img.shields.io/badge/license-MIT-green.svg">
 
 Simple page for academic websites on Hexo, crafted from Jekyll/academicpages.
 
@@ -62,7 +62,7 @@ Only post with `academia: true` front_matter will be shown on home (index) page.
 ## Theme Configurtion
 All of below options can be config in theme folder `_config.yml`
 
-- Top Menu
+- Top Menu: in-page anchor, new page links or any links you like
 - Side Bar: Support avatar, social links, extra social links (optional), CV_download_link
 - Box-shadow mode (optional)
 
@@ -72,5 +72,21 @@ If you want to use rss feed, refer to hexo plugin: [hexo-generator-feed](https:/
 
 ![theme-layout](https://raw.githubusercontent.com/PhosphorW/phower-img-folder/master/hexo-theme-academia_layout.png)
 
+### Update Theme
+This theme supports `data files` smooth update. Copy `_config.yml` in theme folder to site folder `/source/_data/theme.yml`, if there is no `_data` folder, create it.
+
+Then you can modify your theme configuration in the mentioned `theme.yml`. If there is any update, just pull the new branch and your configurations won't be merged. 
+
+**Note:**
+1. When use `data files` to config theme, you must restart hexo server after any modifictions. `hexo server` again.
+2. Sometimes there will be changes in theme `_config.yml`, please refer to [release page](https://github.com/PhosphorW/hexo-theme-academia/releases) for more details before update.
+
 ## Document
 中文文档：[Hexo-Theme-Academia 说明文档](https://phower.me/2020/03/Hexo-theme-academia-%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/)
+
+## Changelogs
+
+**2020-04-22 Ver.1.2.0**
+1. Feature: add pjax support
+2. Feature: support `data files` smooth update
+3. Fixed: optimize some appearance

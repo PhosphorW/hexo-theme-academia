@@ -1,6 +1,6 @@
 favicon: /img/favicon.png
 avatar: /img/avatar.jpg
-# if author sets in hexo_config, this str doesn't work
+# if author sets in hexo_config, this string doesn't work
 author: 'Jason'
 author_bio: 'Your biography can be writed down here.'
 
@@ -12,7 +12,7 @@ since: 2020
 menu:
   Publications: /#Publications
   About: /
-  Blog: /
+  Blog: https://phower.me
 
 # Change to your profile picture
 loading_bg:
@@ -63,4 +63,5 @@ CDN_USE:
     - https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css
   js:
     - https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js #/js/third-party/jquery.min.js
+    - https://cdn.jsdelivr.net/npm/jquery-pjax@latest/jquery.pjax.min.js
     - /js/main.js
