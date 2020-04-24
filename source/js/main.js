@@ -1,4 +1,5 @@
 $(function () {
+    // resize window
     $(window).resize(function () {
         if ($(window).width() < 1280 && $(window).width()>600) {
             $(".page").css({"width": $(window).width() - $(".side-card").width() - 90, "float": "left"})
@@ -7,6 +8,7 @@ $(function () {
         }
     });
 
+    // menu
     $(".m-social-links").click(function () {
         if ($(".author-links").hasClass("is-open")) {
             $(".author-links").removeClass("is-open").addClass("is-close")
@@ -31,6 +33,7 @@ $(function () {
         $(".nav").removeClass("nav-open").addClass("nav-close")
     })
 
+    // 显示 cdtop
     $(document).ready(function ($) {
         var offset = 100,
             scroll_top_duration = 700,
@@ -48,9 +51,33 @@ $(function () {
         });
     });
 
+    // pjax
     $(document).pjax('a[target!=_blank]','.page', {
         fragment: '.page',
         timeout: 5000
+    });
+    $(document).on({
+        'pjax:click': function() {
+            $('body,html').animate({
+                scrollTop: 0,
+            }, 700);
+        }
+    });
+
+    // smooth scroll
+    $(function () {
+        $('a[href*=\\#]:not([href=\\#])').click(function () {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top
+                    }, 700);
+                    return false;
+                }
+            }
+        });
     });
 
 })

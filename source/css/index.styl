@@ -1,23 +1,43 @@
 @import 'user'
+@import '_highlight/highlight.styl'
 
 $font-family = "Times New Roman", FangSong, STFangsong, sans-serif;
 
-html,
-body
-  height 100%
+html
+  height: 100%
   margin 0
+  font-size: 62.5%;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
 
 body
+  height 100%
   margin: 0;
   padding: 0;
   color: #494e52;
+  font-size: 1.8em;
   line-height: 1.5;
   font-family: $font-family
+  scroll-behavior smooth
 
 a,
 span,
 .btn
   font-family: $font-family
+
+img
+  max-width 100%
+
+blockquote
+  position: relative;
+  color: #999;
+  font-weight: 400;
+  background-color #f7f7f7
+  border-left: 5px solid #777;
+  padding: 1rem 1rem 1rem 1.5rem;
+  margin: 1rem 3rem 1rem 2rem;
+  p
+    margin 0
 
 // top menu
 //------------------------------------------------
@@ -35,8 +55,8 @@ span,
   margin-left: auto;
   margin-right: auto;
   clear: both;
-  padding: .8em 1em .5em;
-  font-size: 1.25rem;
+  padding: 1.6rem 2rem 1rem;
+  font-size: 2rem;
 
 #blog_name
   display inline-block
@@ -45,8 +65,8 @@ span,
 
   a
     display: block;
-    margin: 0 1rem;
-    padding: 0.5rem 0;
+    margin: 0 1.6rem;
+    padding: 0.8rem 0;
     color: #7a8288;
     font-weight: 600;
     text-decoration: none;
@@ -70,8 +90,8 @@ span,
       a
         position: relative;
         display: block;
-        margin: 0 1rem;
-        padding: 0.5rem 0;
+        margin: 0 1.6rem;
+        padding: 0.8rem 0;
         color: #7a8288;
         text-decoration: none;
         &::before
@@ -102,10 +122,10 @@ span,
   margin-left: auto;
   margin-right: auto;
   clear: both;
-  margin-top: 2em;
-  margin-bottom: 4em;
-  padding-left: 1em;
-  padding-right: 1em;
+  margin-top: 3.2rem;
+  margin-bottom: 6.4rem;
+  padding-left: 1.6rem;
+  padding-right: 1.6rem;
   animation: intro 0.3s both;
   animation-delay: 0.35s;
   &::after
@@ -113,14 +133,23 @@ span,
     content: "";
     display: table;
 
+.page-title
+  font-size 3rem
+  padding 0 1.2rem
+
 .page article
-  padding-left: .8em;
+  padding-left 1.2rem
+  padding-right 1.2rem
+
+  h1
+    font-size 3rem
   h2
-    font-size 1.8em
+    font-size 2.8rem
   h3
-    font-size 1.4em
-  p
-    font-size 1.2em
+    font-size 2.6rem
+  p,
+  li
+    font-size 1.8rem
   a
     color #494e52
     -webkit-transition: all 0.2s ease-in-out;
@@ -134,7 +163,6 @@ span,
     padding: 0;
     background: #f8f8f8;
     color: #525252;
-    font-size: 14px;
     line-height: 20px;
 
   .gutter pre
@@ -145,6 +173,7 @@ span,
     text-align: right;
 
   code
+    font-family $font-family
     padding: 0.2rem 0.3rem;
     background: rgba(27,31,35,0.05);
     word-wrap: break-word;
@@ -161,15 +190,17 @@ span,
     if hexo-config('box_shadow') && hexo-config('box_shadow.enable')
       -webkit-box-shadow: 0 4px 8px 6px rgba(7,17,27,0.06);
       box-shadow: 0 4px 8px 6px rgba(7,17,27,0.06);
+    .page-title
+      padding 0 3.6rem
     article
-      padding 0 2em 2em;
+      padding 0 3.6rem 3.6rem;
 
 
 // sidebar
 //------------------------------------------------
 .side-card
   clear: both;
-  margin-bottom: 1em;
+  margin-bottom: 1.6rem;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
   .card-wrap
@@ -178,7 +209,7 @@ span,
     width: 100%;
   p,
   li
-    font-size: .85em;
+    font-size: 1.4rem;
     line-height: 1.5;
 
 .author-avatar
@@ -199,8 +230,9 @@ span,
   line-height: 1;
   h3
     margin: 0px;
+    font-size 1.8rem
   .author-bio
-    font-size: .75em;
+    font-size: 1.2rem;
     margin: .3rem 0;
 
 .author-links
@@ -218,7 +250,7 @@ span,
     padding-top: 2px;
     padding-bottom: 2px;
     color: inherit;
-    font-size: 1em;
+    font-size: 1.4rem;
     text-decoration: none;
   button
     margin-bottom: 0px;
@@ -256,7 +288,7 @@ span,
   display: none;
   position: absolute;
   right: 0;
-  width: 90px;
+  width: 115px;
   margin-top: 15px;
   padding-top: 8px;
   padding-left: 10px;
@@ -268,7 +300,7 @@ span,
   box-shadow: 0 0 10px rgba(0,0,0,0.25);
   cursor: default;
   a
-    font-size 1.3em
+    font-size 1.7rem
   li
     display: inline-block;
   .fa
@@ -319,7 +351,7 @@ span,
   .fa
     color black
     &::before
-      margin-right .4rem
+      margin-right .64rem
     span:hover
       text-decoration: underline;
 
@@ -327,7 +359,7 @@ span,
   color: #2070AB !important
   display: block;
   position: relative;
-  font-size: 0.8em;
+  font-size: 1.4rem;
   margin-left: 3.2rem;
   i
     font-weight: 600;
@@ -378,7 +410,7 @@ span,
     padding-right: 0;
     color: black;
     .author-bio
-      font-size: .85em
+      font-size: 1.4rem
       margin-top: 8px;
       margin-bottom: 10px;
 
@@ -400,7 +432,8 @@ span,
 
   .social-links
     display block
-    margin-top .5rem
+    margin-top .8rem
+    margin-bottom 1.6rem
     padding 0
 
   .cv-links
@@ -437,7 +470,7 @@ span,
   clear: both;
   margin-top: 2em;
   padding-left: 2.5em;
-  font-size: .8rem;
+  font-size: 1.28rem;
 
 @media (min-width: 75em)
   .footer_wrap
@@ -546,7 +579,7 @@ span,
     a
       display: block;
       color: rgb(122, 130, 136);
-      font-size: 1em;
+      font-size: 1.6rem;
       margin: 0px;
       padding: 10px 20px;
       text-decoration: none;
