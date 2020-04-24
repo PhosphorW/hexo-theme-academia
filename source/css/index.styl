@@ -81,7 +81,7 @@ blockquote
 .menus_items
   display none
 
-@media (min-width: 37.5em)
+@media (min-width: 34em)
   .menus_items
     display inline-block
     list-style-type none
@@ -181,11 +181,11 @@ blockquote
     background: rgba(27,31,35,0.05);
     word-wrap: break-word;
 
-@media screen and (min-width: 75em)
+@media screen and (min-width: 66.67em)
   #page_main
     max-width: 1200px;
 
-@media (min-width: 37.5em)
+@media (min-width: 34em)
   .page
     width: 82.5%;
     float: right;
@@ -218,8 +218,8 @@ blockquote
 .author-avatar
   display: table-cell;
   vertical-align: top;
-  width: 36px;
-  height: 36px;
+  width: 40px;
+  height: 40px;
   img
     width: 100%;
     max-width: 110px;
@@ -241,7 +241,7 @@ blockquote
 .author-links
   display: table-cell;
   position: relative;
-  vertical-align: middle;
+  vertical-align: top;
   z-index: 10;
   cursor: pointer;
   li
@@ -288,7 +288,8 @@ blockquote
     color: rgb(255, 255, 255) !important;
 
 .social-icons
-  display: none;
+  visibility hidden
+  opacity 0
   position: absolute;
   right: 0;
   width: 115px;
@@ -302,6 +303,19 @@ blockquote
   z-index: -1;
   box-shadow: 0 0 10px rgba(0,0,0,0.25);
   cursor: default;
+  transition: all ease-in-out 0.2s;
+  &::before
+    display: block;
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: calc(50% + 15px);
+    width: 0px;
+    z-index: 0;
+    border-style: solid;
+    border-width: 0px 10px 10px;
+    border-color: rgb(255, 255, 255) transparent;
+    transition: all 0.2s ease-in-out;
   a
     font-size 1.7rem
   li
@@ -322,29 +336,9 @@ blockquote
     &:hover
       color: $theme-red;
 
-.is-open .social-icons::before
-  display: block;
-  content: "";
-  position: absolute;
-  top: -11px;
-  left: calc(50% - 10px);
-  width: 0px;
-  z-index: 0;
-  border-style: solid;
-  border-width: 0px 10px 10px;
-  border-color: rgb(242, 243, 243) transparent;
-
-.is-open .social-icons::after
-  display: block;
-  content: "";
-  position: absolute;
-  top: -10px;
-  left: calc(50% - 10px);
-  width: 0px;
-  z-index: 1;
-  border-style: solid;
-  border-width: 0px 10px 10px;
-  border-color: rgb(255, 255, 255) transparent;
+.is-open .social-icons
+  visibility visible
+  opacity 1
 
 .social-links
   display none
@@ -364,20 +358,20 @@ blockquote
 
 .cv-links
   color: $theme-dark-blue !important
-  display: block;
+  display: inline-block;
   position: relative;
   font-size: 1.4rem;
-  margin-left: 3.2rem;
+  margin-left: 5.5rem;
   i
     text-decoration: underline;
     &::before
       margin-right: .5rem
 
-@media (min-width: 75em)
+@media (min-width: 66.67em)
   .side-card
     padding-right: 0;
 
-@media (min-width: 37.5em)
+@media (min-width: 34em)
   .side-card
     width: 15.25424%;
     min-width: 165px;
@@ -425,6 +419,8 @@ blockquote
 
   .social-icons
     display: block;
+    visibility visible
+    opacity 1
     position: relative;
     width: auto;
     margin: 0;
@@ -432,6 +428,8 @@ blockquote
     border: 0;
     background: transparent;
     box-shadow: none;
+    &::before
+      content none
 
   .m-social-links
     display none
@@ -478,11 +476,11 @@ blockquote
   padding-left: 2.5em;
   font-size: 1.28rem;
 
-@media (min-width: 75em)
+@media (min-width: 66.67em)
   .footer_wrap
     max-width: 1200px;
 
-@media (min-width: 37.5em)
+@media (min-width: 34em)
   .footer_wrap
     padding: 0 1em 2em;
 

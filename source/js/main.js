@@ -1,7 +1,7 @@
 $(function () {
     // resize window
     $(window).resize(function () {
-        if ($(window).width() < 1280 && $(window).width()>600) {
+        if ($(window).width() < 1280 && $(window).width()>540) {
             $(".page").css({"width": $(window).width() - $(".side-card").width() - 90, "float": "left"})
         } else {
             $(".page").removeAttr("style")
@@ -12,10 +12,8 @@ $(function () {
     $(".m-social-links").click(function () {
         if ($(".author-links").hasClass("is-open")) {
             $(".author-links").removeClass("is-open").addClass("is-close")
-            $(".social-icons").css("display","none")
         } else {
             $(".author-links").removeClass("is-close").addClass("is-open")
-            $(".social-icons").css("display","block")
         }
     })
 
@@ -31,6 +29,8 @@ $(function () {
         var target = $(e.target);
         if(target.closest(".nav").length != 0) return;
         $(".nav").removeClass("nav-open").addClass("nav-close")
+        if(target.closest(".author-links").length != 0) return;
+        $(".author-links").removeClass("is-open").addClass("is-close")
     })
 
     // 显示 cdtop
