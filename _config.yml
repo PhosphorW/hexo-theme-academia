@@ -25,24 +25,24 @@ loading_bg:
 social:
   enable: true
 social_links:
-  fa fa-twitter: /
-  fa fa-facebook-square: /
-  fa fa-github: /
-  fa fa-stack-overflow: /
-  fa fa-linkedin-square: /
-  fa fa-weibo: /
-  fa fa-wechat: /
-  fa fa-qq: /
-  fa fa-envelope: / #E-mail
-  fa fa-rss: /  #rss
+  fab fa-twitter: /
+  fab fa-facebook-square: /
+  fab fa-github: /
+  fab fa-stack-overflow: /
+  fab fa-linkedin: /
+  fab fa-weibo: /
+  fab fa-weixin: /
+  fab fa-qq: /
+  fas fa-envelope: / #E-mail
+  fas fa-rss: /  #rss
 
-# Additional social_links，不需要的链接直接注释掉
-# name: url
+# Additional social_links，额外添加自定义链接，可显示链接名称
+# name: url || icon_name
 e_social:
   enable: true
 e_social_links:
-  Google Scholar: /
-  ORCID: /
+  Google Scholar: / || fas fa-graduation-cap
+  ORCID: / || fab fa-orcid
 
 # CV download link
 cv_dl:
@@ -61,7 +61,8 @@ box_shadow:
 CDN_USE:
   css:
     - /css/index.css
-    - https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css
+#    - https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css
+    - https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css # fontawesome 5
   js:
     - https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js #/js/third-party/jquery.min.js
     - https://cdn.jsdelivr.net/npm/jquery-pjax@latest/jquery.pjax.min.js

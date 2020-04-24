@@ -2,6 +2,9 @@
 @import '_highlight/highlight.styl'
 
 $font-family = "Times New Roman", FangSong, STFangsong, sans-serif;
+$theme-blue = #1353d7;
+$theme-dark-blue = #096494;
+$theme-red = #c62641;
 
 html
   height: 100%
@@ -155,7 +158,7 @@ blockquote
     -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
     &:hover
-      color: #c62641;
+      color: $theme-red;
 
   .highlight
     overflow: auto;
@@ -303,9 +306,10 @@ blockquote
     font-size 1.7rem
   li
     display: inline-block;
-  .fa
+  .fa,
+  .fas,
+  .fab
     display: inline-block;
-    font: normal normal normal 14px/1 FontAwesome;
     font-size: inherit;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
@@ -316,7 +320,7 @@ blockquote
     -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
     &:hover
-      color: #c62641;
+      color: $theme-red;
 
 .is-open .social-icons::before
   display: block;
@@ -348,24 +352,26 @@ blockquote
   cursor default
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-  .fa
+
+  .e-social-link
     color black
-    &::before
-      margin-right .64rem
-    span:hover
-      text-decoration: underline;
+    .fa,
+    .fas,
+    .fab
+      padding-right 0.5rem
+    &:hover span
+      text-decoration underline
 
 .cv-links
-  color: #2070AB !important
+  color: $theme-dark-blue !important
   display: block;
   position: relative;
   font-size: 1.4rem;
   margin-left: 3.2rem;
   i
-    font-weight: 600;
     text-decoration: underline;
     &::before
-      margin-right: .4rem
+      margin-right: .5rem
 
 @media (min-width: 75em)
   .side-card
