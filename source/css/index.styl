@@ -6,6 +6,9 @@ $theme-blue = #1353d7;
 $theme-dark-blue = #096494;
 $theme-red = #c62641;
 
+*
+  -webkit-text-size-adjust: none;
+
 html
   height: 100%
   margin 0
@@ -78,8 +81,80 @@ blockquote
     &:hover
       color: black;
 
-.menus_items
-  display none
+@media (max-width: 34em)
+  .menus-open .menus_items
+    visibility visible
+    opacity 1
+    pointer-events auto
+
+  .menus_items
+    visibility hidden
+    opacity 0
+    position: absolute;
+    right: 10px;
+    margin: 0;
+    box-shadow: rgba(0,0,0,0.25) 0px 0px 10px;
+    padding: 5px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #f2f3f3;
+    border-image: initial;
+    border-radius: 4px;
+    background: #fff;
+    list-style: none;
+    transition: all ease-in-out 0.2s;
+    pointer-events none
+    &::before
+      display: block;
+      content: "";
+      position: absolute;
+      top: -10px;
+      left: calc(50% + 15px);
+      width: 0px;
+      z-index: 0;
+      border-style: solid;
+      border-width: 0px 10px 10px;
+      border-color: white transparent;
+    li
+      display: block;
+      border-bottom: 1px solid #f2f3f3;
+      a
+        display: block;
+        color: #7a8288;
+        font-size: 1.6rem;
+        margin: 0px;
+        padding: 8px 15px;
+        text-decoration: none;
+        transition: all 0.2s ease-in-out 0s;
+
+.menus_icon
+  display inline-block
+  position: absolute;
+  right: 30px;
+  top: 22px;
+  height: 30px;
+  width: 30px;
+  background-color: #7a8288;
+  color: #fff;
+  cursor: pointer;
+  padding: 0px 0.3rem;
+  border-width: 0px;
+  outline: none
+
+.menus-open .navicon
+  background: transparent;
+  &::before
+    transform-origin: 50% 50%;
+    top: 0px;
+    left: -3px;
+    width: 25px;
+    transform: rotate3d(0, 0, 1, 45deg);
+  &::after
+    transform-origin: 50% 50%;
+    top: 0px;
+    left: -3px;
+    width: 25px;
+    transform: rotate3d(0, 0, 1, -45deg);
 
 @media (min-width: 34em)
   .menus_items
@@ -116,6 +191,9 @@ blockquote
             -webkit-transform: scaleX(1);
             -ms-transform: scaleX(1);
             transform: scaleX(1);
+
+  .menus_icon
+    display none
 
 
 // page main

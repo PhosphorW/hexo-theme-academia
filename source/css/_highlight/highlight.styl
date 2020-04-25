@@ -25,7 +25,8 @@ $code-block
   padding: 0
   background: $highlight-background
   color: $highlight-foreground
-  font-size: $code-font-size !important
+  font-size: $code-font-size
+  clear both
 
 figure.highlight
   position: relative
@@ -76,42 +77,6 @@ figure.highlight
     td
       padding: 0
       border: none
-
-    figcaption
-      clearfix()
-      position: absolute
-      z-index: 1
-      margin-bottom: 1em
-      padding: .2rem 0 .2rem .7rem
-      width: 100%
-      height: 1.4em
-      color: $highlight-foreground
-      font-size: 1em
-      line-height: 1em
-
-      span
-        float: left
-        overflow: hidden
-        max-width: 100%
-        text-overflow: ellipsis
-        white-space: nowrap
-
-      a
-        float: right
-        padding-right: 10px
-        color: $highlight-foreground
-
-        &:hover
-          border-bottom-color: $highlight-foreground
-
-      &+table
-        margin-top: 1.1rem
-
-        &:before
-          margin-top: -2.1rem
-
-        &:after
-          top: -2.1rem
 
     .gutter pre
       padding-right: .8rem

@@ -9,6 +9,14 @@ $(function () {
     });
 
     // menu
+    $(".menus_icon").click(function () {
+        if ($(".header_wrap").hasClass("menus-open")) {
+            $(".header_wrap").removeClass("menus-open").addClass("menus-close")
+        } else {
+            $(".header_wrap").removeClass("menus-close").addClass("menus-open")
+        }
+    })
+
     $(".m-social-links").click(function () {
         if ($(".author-links").hasClass("is-open")) {
             $(".author-links").removeClass("is-open").addClass("is-close")
@@ -31,6 +39,8 @@ $(function () {
         $(".nav").removeClass("nav-open").addClass("nav-close")
         if(target.closest(".author-links").length != 0) return;
         $(".author-links").removeClass("is-open").addClass("is-close")
+        if((target.closest(".menus_icon").length != 0) || (target.closest(".menus_items").length != 0)) return;
+        $(".header_wrap").removeClass("menus-open").addClass("menus-close")
     })
 
     // 显示 cdtop
@@ -61,6 +71,17 @@ $(function () {
             $('body,html').animate({
                 scrollTop: 0,
             }, 700);
+        },
+        'pjax:end': function() {
+            if ($(".header_wrap").hasClass("menus-open")) {
+                $(".header_wrap").removeClass("menus-open").addClass("menus-close")
+            }
+            if ($(".author-links").hasClass("is-open")) {
+                $(".author-links").removeClass("is-open").addClass("is-close")
+            }
+            if ($(".nav").hasClass("nav-open")) {
+                $(".nav").removeClass("nav-open").addClass("nav-close")
+            }
         }
     });
 
