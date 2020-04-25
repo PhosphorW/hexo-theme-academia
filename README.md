@@ -66,9 +66,11 @@ All of below options can be config in theme folder `_config.yml`
 - Side Bar: Support avatar, social links, extra social links (optional), CV_download_link
 - Box-shadow mode (optional)
 
-All icons in page is supported with [font-awesome-4](http://fontawesome.dashgame.com/)
+All icons in page is supported with [font-awesome-5](https://fontawesome.com/) (~~font-awesome-4~~)
 
-If you want to use rss feed, refer to hexo plugin: [hexo-generator-feed](https://github.com/hexojs/hexo-generator-feed)
+> fontawesome-4 is not used since v1.2.1. If you want to update manually, first change CDN stylesheet to fa5. Then change your previous icon class `fa` to `fas` or `fas`.
+
+If you need rss feed, use hexo plugin: [hexo-generator-feed](https://github.com/hexojs/hexo-generator-feed)
 
 ![theme-layout](https://raw.githubusercontent.com/PhosphorW/phower-img-folder/master/hexo-theme-academia_layout.png)
 
@@ -86,7 +88,7 @@ Then you can modify your theme configuration in the mentioned `theme.yml`. If th
 
 ## Changelogs
 
-**2020-04-22 Ver.1.2.0**
-1. Feature: add pjax support
-2. Feature: support `data files` smooth update
-3. Fixed: optimize some appearance
+🚀[Release page](https://github.com/PhosphorW/hexo-theme-academia/releases)
+
+**v1.2.1**: some small improvements.
+**v1.2.0**: support pjax and data files.
