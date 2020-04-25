@@ -15,12 +15,12 @@
                                 i(class=icon aria-hidden="true")
             if(theme.e_social.enable)
                 ul.social-links
-                    each url, name in theme.e_social_links
+                    each value, name in theme.e_social_links
                         li
-                            a.social-icon(href=url target="_blank")
-                                i(class="fa fa-link" aria-hidden="true")
-                                    span= name
+                            a.e-social-link(href=url_for(trim(value.split('||')[0])) target="_blank")
+                                i(class=trim(value.split('||')[1]) aria-hidden="true")
+                                span= name
         if(theme.cv_dl.enable)
             a.cv-links(href=url_for(theme.cv_dl.dir) target="_blank")
-                i(class="fa fa-file-pdf-o" aria-hidden="true")
+                i(class="fas fa-file-pdf" aria-hidden="true")
                     span= theme.cv_dl.description
