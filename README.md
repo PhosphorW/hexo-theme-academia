@@ -31,7 +31,7 @@ git clone https://github.com/PhosphorW/hexo-theme-academia.git themes/Academia
 
 Some required renderers:
 ```
-npm install hexo-renderer-pug hexo-renderer-stylus
+npm install hexo-renderer-pug hexo-renderer-stylus --save
 ```
 
 Set theme in hexo work folder's `_config.yml`
@@ -86,9 +86,17 @@ Then you can modify your theme configuration in the mentioned `theme.yml`. If th
 ## Document
 中文文档：[Hexo-Theme-Academia 说明文档](https://phower.me/2020/03/Hexo-theme-academia-%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/)
 
+## Q&A
+
+1. Some special url links?
+QQ: `tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=[your number]`
+E-mail: `mailto:jason1995chen@gmail.com`
+rss: `atom.xml` (need additional hexo plugin to generate XML file)
+
 ## Changelogs
 
 🚀[Release page](https://github.com/PhosphorW/hexo-theme-academia/releases)
 
 **v1.2.1**: some small improvements.
+
 **v1.2.0**: support pjax and data files.
