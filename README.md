@@ -90,7 +90,7 @@ Then you can modify your theme configuration in the mentioned `theme.yml`. If th
 
 - **Some special url links?**
     1. QQ: `tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=[your number]`
-    2. E-mail: `mailto:jason1995chen@gmail.com`
+    2. E-mail: `mailto:[your email]`
     3. rss: `atom.xml` (need additional hexo plugin to generate XML file)
 
 ## Changelogs
