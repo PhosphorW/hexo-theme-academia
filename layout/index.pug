@@ -2,6 +2,11 @@ extends includes/layout
 
 block content
     .page(itemscope itemtype='http://schema.org/CreativeWork')
-          each article in page.posts.data
-              if article.academia
-                  article!= article.content
+        each article in page.posts.data
+            - var link = article.link || article.path
+            if article.academia
+                if article.excerpt
+                    article!= article.excerpt
+                        a.post-more(href=url_for(link)) READ MORE
+                else
+                    article!= article.content

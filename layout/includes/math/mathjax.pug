@@ -1,0 +1,21 @@
+script(type="text/x-mathjax-config").
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    CommonHTML: {
+      linebreaks: { automatic: true, width: "90% container" }
+    },
+    "HTML-CSS": { 
+      preferredFont: "TeX",
+      availableFonts: ["STIX", "TeX"]
+    },
+    "SVG": { 
+      linebreaks: { automatic: true, width: "90% container" }
+    }
+  });
+  MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+
+script(src=theme.CDN.mathjax)

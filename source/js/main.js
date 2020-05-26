@@ -82,6 +82,10 @@ $(function () {
             if ($(".nav").hasClass("nav-open")) {
                 $(".nav").removeClass("nav-open").addClass("nav-close")
             }
+            /*渲染MathJax数学公式*/
+            $.getScript('//cdn.jsdelivr.net/npm/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML',function () {
+                MathJax.Hub.Typeset();
+            });
         }
     });
 

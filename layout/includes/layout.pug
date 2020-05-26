@@ -20,3 +20,4 @@ html(lang=config.language)
             include ./footer.pug
         each item in theme.CDN_USE.js
             script(src=url_for(item))
+        include ./addons.pug
