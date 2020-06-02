@@ -1,0 +1,6 @@
+extends includes/layout
+
+block content
+    .page(itemscope itemtype='http://schema.org/CreativeWork')
+        h2.page-title!= page.title
+        article!= page.content

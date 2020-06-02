@@ -58,19 +58,10 @@ box_shadow:
 # MathJax
 # ---------------
 mathjax:
-  enable: false
+  enable: true
   # per_page: true 表示每个页面都加载mathjax.js
   # false 按需加載，需在使用的Markdown Front-matter 加上 mathjax: true
   per_page: false
-
-# KaTeX
-# ---------------
-katex:
-  enable: false
-  # per_page: true 表示每个页面都加载katex.js
-  # false 按需加載，需在使用的Markdown Front-matter 加上 katex: true
-  per_page: false
-  hide_scrollbar: true
 
 # CDN
 # 根据需要自行添加js/css
@@ -88,6 +79,3 @@ CDN_USE:
 # CDN
 CDN:
   mathjax: https://cdn.jsdelivr.net/npm/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML
-  katex: https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css
-  katex_copytex: https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.js
-  katex_copytex_css: https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.css

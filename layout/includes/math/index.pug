@@ -4,10 +4,3 @@ if theme.mathjax && theme.mathjax.enable
     else
         if (page.mathjax || is_home())
             include ./mathjax.pug
-
-if theme.katex && theme.katex.enable
-    if theme.katex.per_page
-        include ./katex.pug
-    else
-        if (page.katex || is_home())
-            include ./katex.pug

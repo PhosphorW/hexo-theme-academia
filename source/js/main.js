@@ -64,7 +64,7 @@ $(function () {
     // pjax
     $(document).pjax('a[target!=_blank]','.page', {
         fragment: '.page',
-        timeout: 5000
+        timeout: 4000
     });
     $(document).on({
         'pjax:click': function() {
@@ -83,7 +83,7 @@ $(function () {
                 $(".nav").removeClass("nav-open").addClass("nav-close")
             }
             /*渲染MathJax数学公式*/
-            $.getScript('//cdn.jsdelivr.net/npm/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML',function () {
+            $.getScript('//cdn.jsdelivr.net/npm/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML', function () {
                 MathJax.Hub.Typeset();
             });
         }
