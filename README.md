@@ -59,14 +59,14 @@ Add `academia: true` in front_matter filed in `post .md`.
 Only post with `academia: true` front_matter will be shown on home (index) page. You can write your information in either one post or some posts with this method. The front_matter doesn't work in `page`. The `pages` are standalone with its markdown content.
 
 
-## Theme Configurtion
-All of following options can be config in the theme folder `_config.yml`
+## Theme Configuration
+All the following options can be config in the theme folder `_config.yml`
 
 - Top Menu: in-page anchor, new page links or any links you like
 - Side Bar: Support avatar, social links, extra social links (optional), CV_download_link
 - Box-shadow mode (optional)
 
-All icons in page is supported with [font-awesome-5](https://fontawesome.com/) (~~font-awesome-4~~)
+All icons in the page is supported with [font-awesome-5](https://fontawesome.com/) (~~font-awesome-4~~)
 
 > fontawesome-4 is deprecated since v1.2.1. If you want to update manually, firstly change CDN stylesheet to fa5. Then change your previous icon class `fa` to `fas` or `fas`.
 
@@ -80,7 +80,7 @@ This theme supports `data files` smooth update. Copy `_config.yml` in theme fold
 Then you can modify your theme configuration in the mentioned `theme.yml`. If there is any update, just pull the new branch and your configurations won't be merged. 
 
 **Note:**
-1. When use `data files` to config theme, you must restart hexo server after any modifictions. `hexo server` or `hexo s` again.
+1. When use `data files` to config theme, you must restart hexo server after any modifications. `hexo server` or `hexo s` again.
 2. Sometimes there will be changes in theme `_config.yml`, please refer to [release page](https://github.com/PhosphorW/hexo-theme-academia/releases) for more details before update.
 
 ## Document
