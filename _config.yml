@@ -2,7 +2,7 @@ favicon: /img/favicon.png
 # Change to your profile picture
 avatar: /img/avatar.jpg
 # if author sets in hexo_config, this string doesn't work
-author: 'Jason'
+author: 'Yuxia Xie'
 author_bio: 'Your biography can be writed down here.'
 
 since: 2020
@@ -17,7 +17,7 @@ menu:
 
 # flink picture will load if avator link calls on error
 loading_bg:
-  flink: /img/profile.png
+  flink: /img/bio-xyx.jpg
 
 # Social Links; 社交链接，不需要的链接直接注释掉
 # 可以调整显示顺序
